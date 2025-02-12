@@ -26,7 +26,7 @@ public class Course {
     }
 
     public Course(String courseName, LocalDate startDate, int weekDuration) {
-        setId(++refId);
+        this.id = ++refId;
         setCourseName(courseName);
         setStartDate(startDate);
         setWeekDuration(weekDuration);
@@ -37,9 +37,6 @@ public class Course {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getCourseName() {
         return courseName;

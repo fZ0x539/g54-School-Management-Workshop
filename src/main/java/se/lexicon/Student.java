@@ -9,7 +9,7 @@ public class Student {
 
     //Constructor(s)
     public Student( String name, String email, String address){
-        setId(++refId);
+        this.id = ++refId;
         setName(name);
         setEmail(email);
         setAddress(address);
@@ -28,9 +28,6 @@ public class Student {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getEmail() {
         return email;

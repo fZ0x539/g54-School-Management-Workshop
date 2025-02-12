@@ -14,8 +14,10 @@ public class Main {
         Student student3 = new Student("Gulam", "noxbondy@gmail.com", "Norrköping 13");
 
         studentDao.saveStudent(student1);
+        studentDao.saveStudent(student1);
         studentDao.saveStudent(student2);
         studentDao.saveStudent(student3);
+        System.out.println(studentDao.deleteStudent(null));
 
         Course course1 = new Course("Java Programming 200", studentDao.findAll());
         courseDao.saveCourse(course1);
