@@ -2,9 +2,12 @@ package se.lexicon.data_access;
 
 import se.lexicon.Student;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDaoList implements StudentDao {
+    private static List<Student> students = new ArrayList<>();
+
 
     @Override
     public Student saveStudent(Student student) {
