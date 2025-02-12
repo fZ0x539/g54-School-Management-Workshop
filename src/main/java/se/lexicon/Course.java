@@ -14,6 +14,13 @@ public class Course {
     private List<Student> students = new ArrayList<>();
 
     //Constructor(s)
+    public Course(String courseName, List<Student> students){
+        this(courseName);
+        for(Student student : students){
+            this.register(student);
+        }
+    }
+
     public Course(String courseName) {
         this(courseName, LocalDate.now(), 5);
     }
@@ -80,5 +87,10 @@ public class Course {
                 System.out.println("Unregistered " + student.getName() + " from " + getCourseName());
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Course{id=" + id + ", name='" + getCourseName() + "', students=" + students + "}";
     }
 }
